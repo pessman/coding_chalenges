@@ -8,6 +8,8 @@ def subsets_that_add_to_n(int_list, target):
     if not isinstance(target, int):
         raise TypeError("integer parameter must be of type int")
 
+    if target == 0:
+        return []
     subsets = []
     for index, integer in enumerate(int_list):
         if target - integer > 0:

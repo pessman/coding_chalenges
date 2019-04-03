@@ -24,4 +24,7 @@ def test_no_subsets():
 def test_subsets():
     assert subsets_that_add_to_n([2, 4, 6, 10], 16) == [[2, 4, 10], [6, 10]]
     assert subsets_that_add_to_n([1, 2, 3, 4, 5], 10) == [[1, 2, 3, 4], [1, 4, 5], [2, 3, 5]]
-    assert subsets_that_add_to_n([2,3,2], 5) == [[2,3], [3,2]]
+    assert subsets_that_add_to_n([2, 3, 2], 5) == [[2, 3], [3, 2]]
+
+def test_target_zero():
+    assert subsets_that_add_to_n([1,2,3], 0) == []
